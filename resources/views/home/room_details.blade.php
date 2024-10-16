@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <base href="/public">
      @include('home.css');
 
@@ -61,6 +63,16 @@
 
                <div class="col-md-4">
                  <h1 style="font-size:40px! important">Book Room</h1> 
+               
+               @if(session()->has('message'))
+               <div class="alert alert-success">
+                  <button class="close" data-bs-dismiss="alert">X</button>
+               {{session()->get('message')}}
+                 </div>
+
+               @endif
+               
+               
                  @if($errors)
                @foreach($errors->all() as $errors)
 
@@ -107,7 +119,7 @@
                </div>
                <div style="padding-top:20px">
                   
-                  <input  type="submit" class="btn btn-primary" value="Book Room">
+                  <input  type="submit" style="background-color:skyblue;" class="btn btn-primary" value="Book Room">
                </div>
 
                </form>
@@ -142,7 +154,7 @@
       $('#endDate').attr('min',maxDate);
    });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
       <!--  footer -->
       @include('home.footer');

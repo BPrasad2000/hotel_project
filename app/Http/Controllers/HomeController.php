@@ -33,7 +33,7 @@ class HomeController extends Controller
 
         $data->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message','Room Booked Successfully');
 
 
     }
