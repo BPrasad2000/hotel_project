@@ -28,6 +28,10 @@ route::get('/delete_booking/{id}',[AdminController::class,'delete_booking']);
 route::get('/approve_book/{id}',[AdminController::class,'approve_book']);
 route::get('/reject_book/{id}',[AdminController::class,'reject_book']);
 
+route::get('/veiw_gallary',[AdminController::class,'veiw_gallary']);
+route::post('/upload_gallary',[AdminController::class,'upload_gallary']);
+route::get('/delete_gallary/{id}',[AdminController::class,'delete_gallary']);
+
 route::get('/room_details/{id}',[HomeController::class,'room_details']);
 route::post('/add_booking/{id}',[HomeController::class,'add_booking']);
 
