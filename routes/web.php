@@ -24,6 +24,7 @@ route::get('/room_delete/{id}',[AdminController::class,'room_delete']);
 route::get('/room_update/{id}',[AdminController::class,'room_update']);
 route::post('/edit_room/{id}',[AdminController::class,'edit_room']);
 route::get('/bookings',[AdminController::class,'bookings']);
+route::get('/delete_booking/{id}',[AdminController::class,'delete_booking']);
 
 route::get('/room_details/{id}',[HomeController::class,'room_details']);
 route::post('/add_booking/{id}',[HomeController::class,'add_booking']);
