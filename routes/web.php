@@ -34,6 +34,7 @@ route::get('/delete_gallary/{id}',[AdminController::class,'delete_gallary']);
 
 route::get('/room_details/{id}',[HomeController::class,'room_details']);
 route::post('/add_booking/{id}',[HomeController::class,'add_booking']);
+route::post('/contact',[HomeController::class,'contact']);
 
 
 
